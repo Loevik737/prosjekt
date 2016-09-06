@@ -1,0 +1,30 @@
+Arrangør: 
+	          (1)Liste med personer som jobber med tekniske ting
+	  	  (2)Liste med konserter på alle senene
+
+
+Bookingansvarlig:
+		  (3)Liste med konserter som har vært, sortert ved sjanger sjanger: publikumstall, scene, band
+		  (4)Liste med nøkkelinfo om band: streamingtall, salgstall, tidligere konserter i norge, manager	
+		  (5)Liste med band som har spilt før: Nøkkelinfo
+
+
+Bookingsjef:
+		  (8)Liste med konserter som har vært: publikumstall, kostnader, økonomisk resultat
+		  (9)Liste med konsertdatoer: booket, antall tilbud sendt, antall ledige datoer
+		  (10)Liste med tilbud om konserter
+		  (11)Liste med bookingtilbud som er sendt til band
+
+
+Lyd/lydteknikker:
+		  (12)Liste med konseter han/hun skal jobbe med
+
+
+Merk: 
+	Punkt 6 trenger ikke plass i databasen for bookingansvarlig
+        Punkt 7 trenger ikke plass i databasen for bookingsjef
+        Her er det tenkt at det er en arrangør/bookingansvarlig/bookingsjef, men flere Lyd/Lys folk.
+
+
+		  
+		   

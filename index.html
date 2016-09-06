@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ProsjektG18</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="css/foundation.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+        <script type='text/javascript' src="js/ng-infinite-scroll.min.js"></script>
+        <script src="js/main.js"></script>
+        
+    </head>
+    <body >
+        <div ng-app="myApp">
+            <div ng-controller="myKontroller">
+                <header>
+                    <li >
+                        <ul><a ng-click="togglerFunc('uploadMenu',false);">| {{status}}</a></ul>
+                    </li>
+                    
+                    <li id="form" class="meny"  ng-show="toggleMenus.uploadMenu">
+                        
+                        <form  id="uploadForm" ng-show="toggleMenus.uploadForm" >
+                            
+                            <label ng-show="isArrangor"><input required type="text" placeholder="text til arrangør..." ng-model="text"></label>
+                            
+                            <label ng-show="isBookingansvarlig"><input required type="text" placeholder="text til bookingansvarlig ..." ng-model="text"></label>
+                            
+                                <button ng-click="upload()">Upload</button>
+                        </form >
+                        
+                        <section class="userSettings " class="userConfig" >
+                            <button ng-hide="toggleMenus.userSettings" id="loginBtn" ng-click="logOut()">Logout</button>
+                            <button  ng-hide="toggleMenus.userSettings" ng-class="{btnSelect: toggleMenus.newPasswordMenu}" id="loginBtn" ng-click="togglerFunc('newPasswordMenu',false);togglerFunc('uploadForm',false)">Settings</button>
+                            <form id="changePassword" ng-show="toggleMenus.newPasswordMenu" >
+                            <label><input type="email" required placeholder="email..." ng-model="email"></label>
+                            <label><input type="password" required placeholder="old password..." ng-model="password1"></label>
+                            <label><input type="password" required placeholder="new password..." ng-model="password2"></label>
+                            <button ng-click="changePassword(email,password1,password2)">Change!</button> 
+                            </form>
+                        </section>
+                        
+                        <section class="userSettings " ng-show="toggleMenus.userSettings">
+                            <button id="loginBtn" ng-class="{btnSelect: toggleMenus.loginMenu}" ng-click="togglerFunc('loginMenu',false);showLogin()">Login</button>
+                            <button id="loginBtn" ng-class="{btnSelect: toggleMenus.createMenu}" ng-click="togglerFunc('createMenu',false);showCreate()">Create</button>
+
+                        <form id="createForm" ng-show="toggleMenus.createMenu" >
+                            <label><input type="email" required placeholder="email..." ng-model="email"></label>
+                            <button ng-click="createUser(email)">Create</button> 
+                        </form>
+                            
+                        <form id="loginForm"   ng-show="toggleMenus.loginMenu" >
+                            <label><input type="email" required placeholder="email..." ng-model="email"></label>
+                            <label><input type="password" required placeholder="password..." ng-model="password"></label>
+                            <button ng-click="loginUser(email,password)">Login</button> 
+                        </form>
+                            
+                        </section>
+                        
+                    </li>
+                </header>
+                
+                <section >
+                            <li ng-repeat="k in arrangorData track by $index"> 
+                                <h3>{{k.text}}</h3>
+                            </li>
+                </section>
+                
+                <section >
+                            <li ng-repeat="k in bookingansvarligData track by $index"> 
+                                <h3>{{k.text}}</h3>
+                            </li>
+                </section>
+                
+                <section >
+                            <li ng-repeat="k in bookingsjefData track by $index"> 
+                                <h3>{{k.text}}</h3>
+                            </li>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
