@@ -65,22 +65,53 @@
                     </li>
                 </header>
                 
-                <section >
-                            <li ng-repeat="k in arrangorData track by $index"> 
-                                <h3>{{k.text}}</h3>
-                            </li>
+                
+                <section ng-show="isArrangor" id="arrangor">
+                    <section style="float:left" >
+                                <li ng-repeat="k in tekpersoner track by $index"> 
+                                    <h3>{{k.navn}}</h3>
+                                </li>
+                    </section>
+                    <section style="float:right">
+                                <li ng-repeat="k in konserter track by $index"> 
+                                    <h3>{{k.navn}}</h3>
+                                    <h3>{{k.dato}}</h3>
+                                    <h3>{{k.scene}}</h3>
+                                </li>
+                    </section>
                 </section>
                 
-                <section >
-                            <li ng-repeat="k in bookingansvarligData track by $index"> 
-                                <h3>{{k.text}}</h3>
-                            </li>
+                <section ng-show="isBookingansvarlig"  id="bookingansvarlig">
+                    <section style="float:left">
+                                <li ng-repeat="k in band track by $index"> 
+                                    <h3>Navn: {{k.navn}}</h3>
+                                    <h3>Spilt før: {{k.spilt}}</h3>
+                                    <h3>Streaming: {{k.streaming}}</h3>
+                                    <h3>Salgstall: {{k.salgstall}}</h3>
+                                    <h3>Manager: {{k.manager}}</h3>
+                                    <h3>{{k.konserterNor}}</h3>
+                                </li>
+                    </section>
+                    <section style="float:right">
+                                <li ng-repeat="k in tidlKonserter track by $index"> 
+                                    <h3>Navn: {{k.navn}}</h3>
+                                    <h3>Sjanger: {{k.sjanger}}</h3>
+                                    <h3>Publikum: {{k.publikum}}</h3>
+                                    <h3>Salgstall: {{k.scene}}</h3>
+                                    <h3>Band: {{k.band}}</h3>
+                                </li>
+                    </section>
                 </section>
                 
-                <section >
-                            <li ng-repeat="k in bookingsjefData track by $index"> 
-                                <h3>{{k.text}}</h3>
-                            </li>
+                <section  ng-show="isBookingsjef"  id="bookingsjef">
+                    <section style="float:left">
+                                <li ng-repeat="k in tidlKonserter track by $index"> 
+                                    <h3>Navn: {{k.navn}}</h3>
+                                    <h3>Publikum: {{k.publikum}}</h3>
+                                    <h3>Kostnader: {{k.kostnader}}</h3>
+                                    <h3>Resultat: {{k.resultat}}</h3>   
+                                </li>
+                    </section>
                 </section>
             </div>
         </div>

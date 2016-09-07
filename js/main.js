@@ -14,19 +14,32 @@ app.controller('myKontroller', function($scope,$location, $firebaseArray){
     var users = new Firebase("https://brukerdata.firebaseio.com");
     
     var ref = new Firebase("https://brukerdata.firebaseio.com/Arrangor");
+    $scope.tekpersoner =  new $firebaseArray(ref.child('TekPersoner'));
+    $scope.konserter =  new $firebaseArray(ref.child('Konserter'));
     $scope.arrangorData =  new $firebaseArray(ref);
     
     var ref2 = new Firebase("https://brukerdata.firebaseio.com/Bookingansvarlig");
+    $scope.band =  new $firebaseArray(ref2.child('Band'));
     $scope.bookingansvarligData =  new $firebaseArray(ref2);
     
     var ref3 = new Firebase("https://brukerdata.firebaseio.com/Bookingsjef");
     $scope.bookingsjefData =  new $firebaseArray(ref3);
     
+    var ref4 = new Firebase("https://brukerdata.firebaseio.com/Konserter");
+    $scope.tidlKonserter =  new $firebaseArray(ref4);
     
     $scope.upload = function(){
-        $scope.bookingansvarligData.$add({text: $scope.text});
+        ref4.push().set({
+            navn: "Konsert3",
+            sjanger:"rnb",
+            publikum:5342,
+            band: ["Band1","Band2","Band3"],
+            scene:"Scene4",
+            kostnader:12000,
+            resultat:400
+            
+        });
     }
-    
     
     
     
