@@ -1,0 +1,3 @@
+6.9) Møtte gruppa og diskuterte hva vi ville bruke som tekniske verktøy og hvilke prioriteringer brukerhistoriene fikk. Lagde gruppekontrakt.
+7.9) Lagde et forslag til hvordan firebase kunne brukes.
+8.9) Møtte gruppa og ble enig om hvilke verktøy som vil bli brukt og lagde en mer detaljert plan over hva som må gjøres i forhold til brukerhistoriene.
