@@ -1,0 +1,18 @@
+1) git init --Init an empty repositry to be able to use git
+2) git remote add origin "url" --url:etc..https://github.com/Loevik737 connecting to a remote destination
+3) git clone https://github.com/Loevik737/pythonskole  --
+4) git pull origin(url) "branch" --url:etc..https://github.com/Loevik737/pythonskole and a branch etc: master 
+5) ALWAYS PULL BEFORE YOU START WORKING!!!!
+6) git add * or git add "filename.extention" --add the changes to be commited
+7) git commit -m"commit message"
+8) git push origin(url) "branch" --"url"etc..https://github.com/Loevik737/pythonskole and a branch etc: master 
+9) git checkout -b <branchName> --Create a local branch and switch to it
+10 git checkout <branchName> --Switch between branches
+11) git branch -d <branchName> --to delete local branch
+12) git push origin --delete <branchName> --to delete remote branch
+13) git merge <branchName> --Merges the branch you are currently on with the <branchName> branch
+
+Alias[]:
+	(git) status = st
+	(git) checkout = che
+	(git) commit = com

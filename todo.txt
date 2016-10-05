@@ -1,0 +1,4 @@
+1) SQL injection prevention http://www.wikihow.com/Create-a-Secure-Login-Script-in-PHP-and-MySQL
+2) $_SESSION security http://www.wikihow.com/Create-a-Secure-Login-Script-in-PHP-and-MySQL
+3) Argon2i hash http://www.hackinsight.org/news,567.html
+4) SSL http://www.uniformserver.com/ZeroXI_documentation/apache.html

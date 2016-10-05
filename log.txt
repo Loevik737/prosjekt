@@ -1,0 +1,9 @@
+6.9) Møte gruppa og diskuterte hva vi ville bruke som tekniske verktøy og hvilke prioriteringer brukerhistoriene fikk. Lagde gruppekontrakt.
+7.9) Lagde et forslag til hvordan firebase kunne brukes.
+8.9) Møte gruppa og ble enig om hvilke verktøy som vil bli brukt og lagde en mer detaljert plan over hva som må gjøres i forhold til brukerhistoriene.
+13.9) Møte med gruppa for å bli ferdig med prosjektplanen. Viste frem prosjektplanen og leverte inn gruppekontrakten. Fordelte arbeidsoppgaver og begynte med oppgavene
+14.9) Startet med å lage en template med bruk av bootstrap,angular.
+15.9) Brukte bootstrap til å lage en nav-bar og front-page.
+16.9) Koblet sammen databasen med GUI front-page og fikset login/logout.
+17.9) Fikset anbefalt php passord kryptering og koblet brukertillgangsnivået til brukeren som er logget inn.
+

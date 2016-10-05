@@ -1,0 +1,6 @@
+1) Det skal ifølge pensum ikke være en demo, men en reveiw hvor prosuktet blir vist frem, og det er en diskusjon mellom produkteier og utvikler
+2) Gjør situasjonen så realistisk som mulig, så produkteier får et godt innsyn i hvordan produktet fungerer
+3) Målet med disse sprinetne var å: 
+4) Vis releaseplanen med tillhørende tester til hver brukerhistorie
+5) Ha releaseplanen med hvordan vis skal teste det
+6) Vis produktet i samme rekkefølge som testplanen så det er lett å følge med
